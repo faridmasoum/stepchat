@@ -3,6 +3,7 @@
 /.github          export-ignore
 /tests            export-ignore
 /examples         export-ignore
+/e2e              export-ignore
 /.gitattributes   export-ignore
 /.gitignore       export-ignore
 /.php-cs-fixer.dist.php export-ignore
