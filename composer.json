@@ -67,8 +67,10 @@
     },
     "scripts": {
         "test": "phpunit",
+        "test:e2e": "cd e2e && npm test",
         "analyse": "phpstan analyse --memory-limit=512M",
         "format": "php-cs-fixer fix",
-        "format:check": "php-cs-fixer fix --dry-run --diff"
+        "format:check": "php-cs-fixer fix --dry-run --diff",
+        "check": ["@test", "@analyse", "@format:check"]
     }
 }

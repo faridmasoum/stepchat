@@ -13,11 +13,13 @@ composer install
 ## Before opening a pull request
 
 ```bash
-composer test          # PHPUnit
-composer analyse       # PHPStan (level 6)
-composer format        # PHP-CS-Fixer (PSR-12)
+composer check          # PHPUnit (unit + real HTTP), PHPStan, code style
+cd e2e && npm ci && npx playwright install chromium   # first time only
+composer test:e2e       # real browser widget against a real PHP endpoint
 node --check resources/dist/stepchat-widget.js
 ```
+
+All of these must pass before you open a pull request. CI runs the same checks.
 
 ## Guidelines
 
